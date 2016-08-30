@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+//Source Code Written: 1/6/13
+
+#include <stdio.h>
 
 int main() {
     int T, A, B;
