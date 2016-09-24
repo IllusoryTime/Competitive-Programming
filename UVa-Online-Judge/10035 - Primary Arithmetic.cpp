@@ -15,7 +15,7 @@ int main() {
             r = z%10 + q%10 + x;
             z /= 10;
             q /= 10;
-            if(r>=10) {
+            if(r >= 10) {
                 ans++;
                 x = 1;
             } else x = 0;
