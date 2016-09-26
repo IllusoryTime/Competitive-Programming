@@ -8,31 +8,29 @@ int main() {
     char month1[15], month2[15], ch[4];
     cin >> test;
     for(i=1; i<=test; i++) {
-        int ly1 = 1, ly2 = 1, ly = 1;
+        int LP1 = 1, LP2 = 1, LP = 1;
         cin >> month1 >> day1 >> ch >> year1;
         cin >> month2 >> day2 >> ch >> year2;
-        int year3 = year2-2000;;
-        ly1 += year2/4;
-        ly1 -= year2/100;
-        ly1 += year2/400;
-        int year4 = year1-2000;;
-        ly2 += year1/4;
-        ly2 -= year1/100;
-        ly2 += year1/400;
-        ly = ly1 - ly2;
+        LP1 += year2/4;
+        LP1 -= year2/100;
+        LP1 += year2/400;
+        LP2 += year1/4;
+        LP2 -= year1/100;
+        LP2 += year1/400;
+        LP = LP1 - LP2;
         if(year1%400 == 0 || (year1%100 != 0 && year1%4 == 0)) {
             int f = strcmp(month1, "January");
             int g = strcmp(month1, "February");
-            if(f==0 || g==0) ly++;
+            if(f==0 || g==0) LP++;
         }
         if(year2%400 == 0 || (year2%100 != 0 && year2%4 == 0)) {
             int f = strcmp(month2, "January");
             int g = strcmp(month2, "February");
             if((f==0 || g==0)) {
-                if(day2 != 29) ly--;
+                if(day2 != 29) LP--;
             }
         }
-        printf("Case %d: %d\n", i, ly);
+        printf("Case %d: %d\n", i, LP);
     }
     return 0;
 }
