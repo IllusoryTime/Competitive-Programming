@@ -1,5 +1,5 @@
 //Problem Solved: 7/27/13
-//Last Update: 9/27/16
+//Last Edit: 9/27/16
 
 #include <stdio.h>
 int main() {
