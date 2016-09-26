@@ -1,0 +1,23 @@
+//Source Code Written: 6/1/15
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    //freopen("in.txt", "r", stdin);
+    string str;
+    while(getline(cin, str)) {
+        if(str[0] == '0') break;
+        int len = str.size(), i = 0, r = 0;
+        while(i < len) {
+            r *= 10;
+            int k = str[i] - '0';
+            r += k;
+            if(r >= 17) r %= 17;
+            i++;
+        }
+        if(r) printf("0\n");
+        else printf("1\n");
+    }
+    return 0;
+}
