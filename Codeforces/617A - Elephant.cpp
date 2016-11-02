@@ -1,5 +1,5 @@
 //Problem Solved: 1/23/15
-//Last Edit: 9/29/16
+//Last Edit: 11/2/16
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -11,7 +11,7 @@ int main() {
     while(cin >> n) {
         int ans = n / 5;
         if(n % 5) ans++;
-        cout<< ans <<endl;
+        cout << ans << endl;
     }
     return 0;
 }
